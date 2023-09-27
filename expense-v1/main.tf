@@ -8,7 +8,7 @@ resource "aws_instance" "frontend" {
   }
 }
 
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "frontend" {
   zone_id = "Z03665552INK97CUQ6WQD"
   name    = "frontend.kdevopsb26.online"
   type    = "A"
@@ -26,7 +26,7 @@ resource "aws_instance" "backend" {
   }
 }
 
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "backend" {
   zone_id = "Z03665552INK97CUQ6WQD"
   name    = "backend.kdevopsb26.online"
   type    = "A"
@@ -44,7 +44,7 @@ resource "aws_instance" "mysql" {
   }
 }
 
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "mysql" {
   zone_id = "Z03665552INK97CUQ6WQD"
   name    = "mysql.kdevopsb26.online"
   type    = "A"
