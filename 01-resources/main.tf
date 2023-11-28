@@ -14,3 +14,8 @@ resource "aws_route53_record" "www" {
   ttl     = 30
   records = [ aws_instance.web.private_ip ]
 }
+
+provider "google" {
+  project     = "vivid-cargo-406201"
+  region      = "us-central1"
+}
